@@ -40,7 +40,7 @@ jobs:
       - name: 上传文件
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '/'
+          path: '.'
       - name: 部署到 GitHub 页面
         id: deployment
         uses: actions/deploy-pages@v4
