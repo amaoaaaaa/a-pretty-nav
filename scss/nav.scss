@@ -1,0 +1,621 @@
+$navHeight: 80px;
+$mNavHeight: 70px;
+$xsNavHeight: $mNavHeight * .8;
+$mNavPaddingLeft: 30px;
+$navHoverBg: rgb(248, 248, 248);
+$mNavBg: rgba(0, 0, 0, .02);
+$secondNavHeight: 45px;
+$secondNavFontSize: 15px;
+$primaryColor: #27ae60;
+$textColor1: #333;
+$textColor2: #555;
+$textColor3: #666;
+$textColor4: #777;
+$textColor5: #888;
+$transition: all .3s;
+$borderRadius: 6px;
+$boxShadow: 0 0 20px rgba(0, 0, 0, .1);
+$borderColor: rgba(0, 0, 0, .05);
+$border: 1px solid $borderColor;
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: none;
+    z-index: 10;
+    transition: $transition;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -$navHeight;
+        left: 0;
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: $transition;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.nav {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    .brand {
+        height: $navHeight;
+        position: relative;
+        .logo.white,
+        .logo.color {
+            height: 100%;
+            padding: 22px 0;
+            transition: $transition;
+            opacity: 1;
+        }
+        .logo.color {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+    & .nav-items {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        .item {
+            list-style: none;
+            // margin-left: 50px;
+            position: relative;
+            &:first-child {
+                margin-left: 0 !important;
+            }
+            a {
+                height: $navHeight;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                transition: $transition;
+            }
+            &>.second-nav {
+                padding: 0;
+                position: absolute;
+                // left: 50%;
+                // transform: translateX(-50%);
+                top: $navHeight + $secondNavHeight;
+                width: auto;
+                transition: $transition;
+                opacity: 0;
+                pointer-events: none;
+                &>.item {
+                    margin: 0;
+                    border: $border;
+                    border-bottom: 0;
+                    transition: $transition;
+                    background: #fff;
+                    position: relative;
+                    &:first-child {
+                        border-radius: $borderRadius $borderRadius 0 0;
+                    }
+                    &:last-child {
+                        border-bottom: 1px solid $borderColor;
+                        border-radius: 0 0 $borderRadius $borderRadius;
+                    }
+                    &.only {
+                        border-radius: $borderRadius;
+                    }
+                    &:hover {
+                        background: $navHoverBg;
+                    }
+                    &>a {
+                        color: $textColor3;
+                        height: $secondNavHeight;
+                        white-space: nowrap;
+                        padding: 0 30px;
+                        font-size: $secondNavFontSize;
+                        display: flex;
+                        justify-content: space-between;
+                        &.active {
+                            color: $primaryColor;
+                        }
+                        &>.iconfont {
+                            transition: color .2s;
+                            margin-left: 40px;
+                            color: $textColor5;
+                        }
+                    }
+                    &:hover>a {
+                        color: $primaryColor;
+                        &>.iconfont {
+                            color: $primaryColor;
+                        }
+                    }
+                    &>.third-nav {
+                        position: absolute;
+                        left: 100%;
+                        top: 100%;
+                        padding: 0;
+                        transition: $transition;
+                        opacity: 0;
+                        pointer-events: none;
+                        &>.item {
+                            margin: 0;
+                            border: $border;
+                            border-bottom: 0;
+                            transition: $transition;
+                            background: #fff;
+                            position: relative;
+                            &:first-child {
+                                border-radius: $borderRadius $borderRadius 0 0;
+                            }
+                            &:last-child {
+                                border-bottom: 1px solid $borderColor;
+                                border-radius: 0 0 $borderRadius $borderRadius;
+                            }
+                            &.only {
+                                border-radius: $borderRadius;
+                            }
+                            &:hover {
+                                background: $navHoverBg;
+                            }
+                            &>a {
+                                color: $textColor3;
+                                height: $secondNavHeight;
+                                white-space: nowrap;
+                                padding: 0 30px;
+                                font-size: $secondNavFontSize;
+                                display: flex;
+                                justify-content: space-between;
+                                &.active {
+                                    color: $primaryColor;
+                                }
+                                &>.iconfont {
+                                    transition: color .2s;
+                                    margin-left: 40px;
+                                    color: $textColor5;
+                                }
+                            }
+                            &:hover>a {
+                                color: $primaryColor;
+                                &>.iconfont {
+                                    color: $primaryColor;
+                                }
+                            }
+                            &>.fourth-nav {
+                                position: absolute;
+                                left: 100%;
+                                top: 100%;
+                                padding: 0;
+                                transition: $transition;
+                                opacity: 0;
+                                pointer-events: none;
+                                &>.item {
+                                    margin: 0;
+                                    border: $border;
+                                    border-bottom: 0;
+                                    transition: $transition;
+                                    background: #fff;
+                                    position: relative;
+                                    &:first-child {
+                                        border-radius: $borderRadius $borderRadius 0 0;
+                                    }
+                                    &:last-child {
+                                        border-bottom: 1px solid $borderColor;
+                                        border-radius: 0 0 $borderRadius $borderRadius;
+                                    }
+                                    &.only {
+                                        border-radius: $borderRadius;
+                                    }
+                                    &:hover {
+                                        background: $navHoverBg;
+                                    }
+                                    &>a {
+                                        color: $textColor3;
+                                        height: $secondNavHeight;
+                                        white-space: nowrap;
+                                        padding: 0 30px;
+                                        font-size: $secondNavFontSize;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        &.active {
+                                            color: $primaryColor;
+                                        }
+                                        &>.iconfont {
+                                            transition: color .2s;
+                                            margin-left: 40px;
+                                            color: $textColor5;
+                                        }
+                                    }
+                                    &:hover>a {
+                                        color: $primaryColor;
+                                        &>.iconfont {
+                                            color: $primaryColor;
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover>.fourth-nav {
+                                top: -1px;
+                                opacity: 1;
+                                pointer-events: all;
+                            }
+                        }
+                    }
+                    &:hover>.third-nav {
+                        top: -1px;
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+            // &>.second-nav:last-child {
+            //     left: auto;
+            //     right: 0;
+            // }
+            &:hover>.second-nav {
+                opacity: 1;
+                top: $navHeight;
+                pointer-events: all;
+            }
+            &.language {
+                .second-nav {
+                    a {
+                        justify-content: left;
+                        .icon {
+                            margin-right: 10px;
+                        }
+                    }
+                    &.on-left {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+            .item {
+                &.active {
+                    &>a {
+                        color: $primaryColor !important;
+                    }
+                }
+            }
+        }
+        &>.item>a>.iconfont {
+            display: none;
+        }
+        .slide {
+            width: 2em;
+            height: 3px;
+            border-radius: 100px;
+            background: $primaryColor;
+            position: absolute;
+            bottom: ($navHeight - 16px) / 2 - (($navHeight - 16px) / 2) / 2 - 1.5px;
+            left: 0;
+            opacity: 0;
+            transition: $transition;
+            pointer-events: none;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+    }
+}
+
+nav.active {
+    &::before {
+        top: 0;
+        box-shadow: $boxShadow;
+    }
+    .logo.white {
+        opacity: 0 !important;
+    }
+    .logo.color {
+        opacity: 1 !important;
+    }
+    .nav-items .item {
+        a {
+            color: $textColor2;
+            transition: $transition, color .2s;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+        &.active {
+            a {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    nav::before {
+        display: none;
+    }
+    body {
+        &.fix {
+            overflow-y: hidden !important;
+        }
+    }
+    .nav {
+        position: relative;
+        background: #fff;
+        align-items: center;
+        .brand {
+            height: $mNavHeight;
+            .logo.white,
+            .logo.color {
+                padding: 20px 0;
+            }
+            .logo.color {
+                opacity: 1 !important;
+            }
+        }
+        .main-nav {
+            position: absolute;
+            top: 100%;
+            width: 100vw;
+            left: 100vw;
+            background: #fff;
+            transition: $transition;
+            border-top: 1px solid $borderColor;
+            height: calc(100vh - #{$mNavHeight});
+            overflow-y: auto;
+            &.active {
+                left: 0;
+            }
+            .nav-items {
+                .item {
+                    border-bottom: 1px solid $borderColor;
+                    a {
+                        height: $mNavHeight * .8;
+                        color: $textColor2 !important;
+                        padding: 0 $mNavPaddingLeft/2 0 $mNavPaddingLeft;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px !important;
+                        .iconfont {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transform: rotate(-90deg);
+                            font-size: $mNavHeight * .3;
+                            height: $mNavHeight * .8;
+                            width: $mNavHeight * .8;
+                            transition: $transition;
+                            color: $textColor2;
+                            &.active {
+                                transform: rotate(90deg);
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                    &.active {
+                        &>a {
+                            color: $primaryColor !important;
+                        }
+                    }
+                }
+                &>.item {
+                    &>.second-nav {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        opacity: 1;
+                        pointer-events: all;
+                        &>.item {
+                            border: 0;
+                            height: auto;
+                            background: $mNavBg;
+                            border-radius: 0;
+                            &>a {
+                                height: 0;
+                                opacity: 0;
+                                overflow: hidden;
+                                padding: 0 $mNavPaddingLeft/2 0 $mNavPaddingLeft*2;
+                                position: relative;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: transparent;
+                                }
+                                &>.iconfont {
+                                    transition: $transition;
+                                    color: $textColor2;
+                                    &.active {
+                                        color: $primaryColor;
+                                    }
+                                }
+                            }
+                            &>.third-nav {
+                                position: relative;
+                                left: 0;
+                                top: 0;
+                                opacity: 1;
+                                pointer-events: all;
+                                &>.item {
+                                    border: 0;
+                                    height: auto;
+                                    background: $mNavBg;
+                                    border-radius: 0;
+                                    &>a {
+                                        height: 0;
+                                        opacity: 0;
+                                        overflow: hidden;
+                                        padding: 0 $mNavPaddingLeft/2 0 $mNavPaddingLeft*3;
+                                        position: relative;
+                                        &::before {
+                                            content: '';
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 1px;
+                                            background: transparent;
+                                        }
+                                        &>.iconfont {
+                                            transition: $transition;
+                                            color: $textColor2;
+                                            &.active {
+                                                color: $primaryColor;
+                                            }
+                                        }
+                                    }
+                                    &>.fourth-nav {
+                                        position: relative;
+                                        left: 0;
+                                        top: 0;
+                                        opacity: 1;
+                                        pointer-events: all;
+                                        &>.item {
+                                            border: 0;
+                                            height: auto;
+                                            background: $mNavBg;
+                                            border-radius: 0;
+                                            &>a {
+                                                height: 0;
+                                                opacity: 0;
+                                                overflow: hidden;
+                                                padding: 0 $mNavPaddingLeft/2 0 $mNavPaddingLeft*4;
+                                                position: relative;
+                                                &::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    background: transparent;
+                                                }
+                                                &>.iconfont {
+                                                    transition: $transition;
+                                                    color: $textColor2;
+                                                    &.active {
+                                                        color: $primaryColor;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            &>.item {
+                                                &>a {
+                                                    height: $mNavHeight * .8;
+                                                    opacity: 1;
+                                                    &::before {
+                                                        background: $borderColor;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    &>.item {
+                                        &>a {
+                                            height: $mNavHeight * .8;
+                                            opacity: 1;
+                                            &::before {
+                                                background: $borderColor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            &>.item {
+                                &>a {
+                                    height: $mNavHeight * .8;
+                                    opacity: 1;
+                                    &::before {
+                                        background: $borderColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .slide {
+                    display: none;
+                }
+            }
+        }
+        .menu {
+            width: $mNavHeight * .6;
+            height: $mNavHeight * .6;
+            background: none;
+            border-radius: 100%;
+            padding: 0;
+            border: 0;
+            position: relative;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .iconfont {
+                font-size: $mNavHeight * .45;
+                color: $textColor2;
+                position: absolute;
+                opacity: 0;
+                transition: $transition;
+            }
+            .iconfont.icon-menu {
+                opacity: 1;
+            }
+            &.active {
+                .iconfont.icon-menu {
+                    opacity: 0;
+                    transform: rotate(360deg);
+                }
+                .iconfont.icon-close {
+                    opacity: 1;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .nav {
+        .brand {
+            height: $xsNavHeight;
+            .logo.white,
+            .logo.color {
+                padding: 15px 0;
+            }
+        }
+        .main-nav {
+            height: calc(100vh - #{$xsNavHeight});
+            .nav-items {
+                .item {
+                    >a {
+                        height: $xsNavHeight;
+                    }
+                }
+            }
+        }
+        .menu {
+            .iconfont {
+                font-size: $mNavHeight * .38;
+            }
+        }
+        & * {
+            transition: all .15s !important;
+        }
+    }
+}

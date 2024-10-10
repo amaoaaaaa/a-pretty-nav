@@ -1,0 +1,51 @@
+{
+  "id": "1950136",
+  "name": "导航栏组件",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9086130",
+      "name": "美国",
+      "font_class": "meiguo-",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "11501929",
+      "name": "国旗",
+      "font_class": "guoqi",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "15981364",
+      "name": "下一页",
+      "font_class": "down",
+      "unicode": "e77d",
+      "unicode_decimal": 59261
+    },
+    {
+      "icon_id": "7708027",
+      "name": "关闭",
+      "font_class": "close",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "7708032",
+      "name": "菜单",
+      "font_class": "menu",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "11521401",
+      "name": "下一页",
+      "font_class": "next",
+      "unicode": "e77c",
+      "unicode_decimal": 59260
+    }
+  ]
+}
