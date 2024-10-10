@@ -1,228 +1,221 @@
 <!DOCTYPE html>
-<!-- <html lang="en"> -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>响应式导航栏</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./iconfont/iconfont.css" rel="stylesheet">
-    <link href="./css/nav.min.css" rel="stylesheet">
-    <style>
-        body {
-            min-height: 130vh;
-            background-image: url("../img/bg.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .container {
-            max-width: 1400px;
-        }
-        
-        @media screen and (max-width:575px) {
+<html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>响应式导航栏</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet" />
+        <link href="./iconfont/iconfont.css" rel="stylesheet" />
+        <link href="./css/nav.min.css" rel="stylesheet" />
+        <style>
             body {
-                min-height: auto;
-                height: 100vh;
+                min-height: 130vh;
+                background-image: url("./img/bg.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
-        }
-    </style>
-</head>
 
-<body>
+            .container {
+                max-width: 1400px;
+            }
 
+            @media screen and (max-width: 575px) {
+                body {
+                    min-height: auto;
+                    height: 100vh;
+                }
+            }
+        </style>
+    </head>
 
-    <nav>
-        <div class="container nav">
-            <div class="brand">
-                <a href="/">
-                    <img class="logo white" src="./img/logo1.png" alt="logo">
-                    <img class="logo color" src="./img/logo.png" alt="logo">
-                </a>
+    <body>
+        <nav>
+            <div class="container nav">
+                <div class="brand">
+                    <a href="/">
+                        <img class="logo white" src="./img/logo1.png" alt="logo" />
+                        <img class="logo color" src="./img/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="main-nav">
+                    <ul class="nav-items clearfix">
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">首页</a>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">集团业务</a>
+                            <ul class="second-nav">
+                                <li class="item">
+                                    <!-- <i class="iconfont icon-next"></i> -->
+                                    <a href="/">地产建筑</a>
+                                    <ul class="third-nav">
+                                        <li class="item">
+                                            <a href="/">亚洲</a>
+                                            <ul class="fourth-nav">
+                                                <li class="item">
+                                                    <a href="/">中国</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="/">韩国</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="/">日本</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">欧洲</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">美洲</a>
+                                            <ul class="fourth-nav">
+                                                <li class="item">
+                                                    <a href="/">南美洲</a>
+                                                </li>
+                                                <li class="item active">
+                                                    <a href="/">北美洲</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="item">
+                                    <a href="/">金融财务</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/">高新科技</a>
+                                    <ul class="third-nav">
+                                        <li class="item">
+                                            <a href="/">VR</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">人工智能</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">数码产品</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="item">
+                                    <a href="/">文化传媒</a>
+                                    <ul class="third-nav">
+                                        <li class="item">
+                                            <a href="/">电影院建设</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">电影拍摄</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">新媒体服务</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="item">
+                                    <a href="/">教育培训</a>
+                                    <ul class="third-nav">
+                                        <li class="item">
+                                            <a href="/">幼儿早教</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">高校合作</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">培训机构</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">学校建设</a>
+                                            <ul class="fourth-nav">
+                                                <li class="item">
+                                                    <a href="/">山区扶贫项目</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">解决方案</a>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">集团动态</a>
+                            <ul class="second-nav">
+                                <li class="item">
+                                    <a href="/">最新活动</a>
+                                    <ul class="third-nav">
+                                        <li class="item">
+                                            <a href="/">合作交流</a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="/">招投标</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="item">
+                                    <a href="/">媒体报道</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">关于我们</a>
+                            <ul class="second-nav">
+                                <li class="item">
+                                    <a href="/">集团介绍</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/">企业文化</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/">愿望使命</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5">
+                            <a href="/">联系我们</a>
+                        </li>
+                        <li class="item float-lg-left ml-lg-5 language">
+                            <a href="/">切换语言</a>
+                            <ul class="second-nav">
+                                <li class="item">
+                                    <a href="/" data-language="zh_CN">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-guoqi"></use>
+                                        </svg>
+                                        <span>简体中文</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="/" data-language="zh_TW">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-guoqi"></use>
+                                        </svg>
+                                        <span>繁體中文</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="/" data-language="en_US">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-meiguo-"></use>
+                                        </svg>
+                                        <span>English</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="slide"></div>
+                    </ul>
+                </div>
+                <button class="d-lg-none menu">
+                    <i class="iconfont icon-menu"></i>
+                    <i class="iconfont icon-close"></i>
+                </button>
             </div>
-            <div class="main-nav">
-                <ul class="nav-items clearfix">
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">首页</a>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">集团业务</a>
-                        <ul class="second-nav">
-                            <li class="item">
-                                <!-- <i class="iconfont icon-next"></i> -->
-                                <a href="/">地产建筑</a>
-                                <ul class="third-nav">
-                                    <li class="item">
-                                        <a href="/">亚洲</a>
-                                        <ul class="fourth-nav">
-                                            <li class="item">
-                                                <a href="/">中国</a>
-                                            </li>
-                                            <li class="item">
-                                                <a href="/">韩国</a>
-                                            </li>
-                                            <li class="item">
-                                                <a href="/">日本</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">欧洲</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">美洲</a>
-                                        <ul class="fourth-nav">
-                                            <li class="item">
-                                                <a href="/">南美洲</a>
-                                            </li>
-                                            <li class="item active">
-                                                <a href="/">北美洲</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="/">金融财务</a>
-                            </li>
-                            <li class="item">
-                                <a href="/">高新科技</a>
-                                <ul class="third-nav">
-                                    <li class="item">
-                                        <a href="/">VR</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">人工智能</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">数码产品</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="/">文化传媒</a>
-                                <ul class="third-nav">
-                                    <li class="item">
-                                        <a href="/">电影院建设</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">电影拍摄</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">新媒体服务</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="/">教育培训</a>
-                                <ul class="third-nav">
-                                    <li class="item">
-                                        <a href="/">幼儿早教</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">高校合作</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">培训机构</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">学校建设</a>
-                                        <ul class="fourth-nav">
-                                            <li class="item">
-                                                <a href="/">山区扶贫项目</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">解决方案</a>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">集团动态</a>
-                        <ul class="second-nav">
-                            <li class="item">
-                                <a href="/">最新活动</a>
-                                <ul class="third-nav">
-                                    <li class="item">
-                                        <a href="/">合作交流</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="/">招投标</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="/">媒体报道</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">关于我们</a>
-                        <ul class="second-nav">
-                            <li class="item">
-                                <a href="/">集团介绍</a>
-                            </li>
-                            <li class="item">
-                                <a href="/">企业文化</a>
-                            </li>
-                            <li class="item">
-                                <a href="/">愿望使命</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5">
-                        <a href="/">联系我们</a>
-                    </li>
-                    <li class="item float-lg-left ml-lg-5 language">
-                        <a href="/">切换语言</a>
-                        <ul class="second-nav">
-                            <li class="item">
-                                <a href="/" data-language="zh_CN">
-                                    <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-guoqi"></use>
-                                    </svg>
-                                    <span>简体中文</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="/" data-language="zh_TW">
-                                    <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-guoqi"></use>
-                                    </svg>
-                                    <span>繁體中文</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="/" data-language="en_US">
-                                    <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-meiguo-"></use>
-                                    </svg>
-                                    <span>English</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <div class="slide"></div>
-                </ul>
-            </div>
-            <button class="d-lg-none menu">
-                <i class="iconfont icon-menu"></i>
-                <i class="iconfont icon-close"></i>
-            </button>
-        </div>
-    </nav>
+        </nav>
 
-
-
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./iconfont/iconfont.js"></script>
-    <script src="./js/nav.js"></script>
-
-</body>
-
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./iconfont/iconfont.js"></script>
+        <script src="./js/nav.js"></script>
+    </body>
 </html>
